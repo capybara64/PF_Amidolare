@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.foto{
+    width: 24%;
+    object-fit: contain;
+    animation-name: img;
+    animation-duration: 2s;
+}
+.copyright{
+    margin: 0 auto;
+    color: white;
+    font-size: 14px;
+    color: chartreuse;
+}
+/* Galería */
+.galeria{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    row-gap: 30px;
+}
+.galeria_img{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    box-shadow: 10px 0 15px black;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: all .2s;
+    animation-name: img;
+    animation-duration: 1s;
+}
+.galeria_img:hover{
+    transform: scale(1.1,1.1);
+}
+/* Botones */
+.menu,.comprar,.agotado,#enviar{
+    background-color: chartreuse;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 0 10px;
+    border: none;
+    height: 50px;
+}
+.menu:hover{
+    transition: all .4s;
+    background-color: limegreen;
+}
+.agotado{
+    background-color: fuchsia;
+}
+.bio{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.disco{
+    display: flex;
+    justify-content: space-around;
+}
+.bio_p{
+    margin: 30px;
+}
+.table{
+    width: 90%;
+    margin: 0 auto;
+}
+#comentario{
+    height: 30px;
+}
+/* Texto botones */
+a div p, button, input[type='submit']{
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+    font-family: 'Michroma';
+    font-weight: bold;
+    align-items: center;
+}
+li{
+    display: inline;
+    list-style-type: none;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Botones nav */
+nav ul li{
+    width: 18%;
+}
+/* Botones tabla */
+td button{
+    width: 60%;
+}
+/* Botón form */
+input[type='submit']{
+    width: 100px;
+}
+body{
+    text-align: center;
+    background-image: linear-gradient(cornflowerblue,chartreuse);
+    margin: 180px 0 130px;
+}
+/* Títulos */
+h1{
+    font-size: 60px;
+    font-family: 'Michroma';
+}
+h2{
+    color: fuchsia;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: 'Michroma';
+}
+h3{
+    font-size: 34px;
+    margin: 10px 0 20px;
+    font-family: 'Michroma';
+}
+p,a{
+    font-size: 28px;
+    font-family: Georgia;
+    text-decoration: none;
+}
+section{
+    background-color: white;
+    border-radius: 20px;
+    width: 75%;
+    padding: 16px 0 16px 0;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+/* Header y footer */
+header,footer{
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 0 30px fuchsia;
+    z-index: 10;
+}
+header{
+    top: 0;
+}
+header img{
+    height: 70px;
+    margin: 10px;
+    animation-name: logo;
+    animation-duration: 1s;
+}
+footer{
+    bottom: 0;
+    padding: 20px;
+}
+footer ul{
+    margin: 0;
+}
+iframe{
+    margin: 20px;
+    box-shadow: 10px 0 15px;
+    width: 45%;
+    height: 580px;
+}
+/* Form contacto */
+td input,td textarea{
+    margin: 8px 10px;
+    font-size: 26px;
+    width: 90%;
+}
+textarea{
+    min-height: 200px;
+}
+label{
+    font-size: 26px;
+}
+form table{
+    margin: 0 auto;
+}
+form td{
+    text-align: right;
+}
+th,td{
+    font-size: 26px;
+}
+span p{
+    text-align: justify;
+}
+/* Íconos Bootstrap */
+i{
+    color: chartreuse;
+    font-size: 32px;
+    margin: 0 10px;
+}
+i:hover{
+    color: limegreen;
+    transition: all .4s;
+}
+@media only screen and (max-width: 600px) {
+    /* Botones  del nav*/
+    .menu{
+        font-size: 18px;
+        width: 100%;
+        height: 40px;
+    }
+    .bio{
+        flex-direction: column;
+        align-items: center;
+    }
+    .galeria{
+        grid-template-columns: 90%;
+        justify-items: center;
+        row-gap: 30px;
+    }
+    .disco{
+        flex-direction: column;
+        align-items: center;
+    }
+    .foto{
+        margin-bottom: -20px;
+        height: 240px;
+        width: 70%;
+        object-fit: cover;
+        object-position: top;
+        border-bottom: 1px solid;
+    }
+    header img{
+        height: 50px;
+        width: 50%;
+    }
+    /* Nav */
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        width: 90%;
+        height: 34px;
+        margin-bottom: 10px;
+    }
+    /* Texto botones del nav */
+    a div p{
+        margin-top: 3px;
+        font-size: 18px;
+    }
+    body{
+        margin: 330px 0 140px;
+    }
+    /* Títulos */
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    p,a{
+        margin: 0;
+        font-size: 22px;
+        font-family: Georgia;
+    }
+    section{
+        background-color: white;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    iframe{
+        width: 90%;
+    }
+}
+@keyframes logo {
+    from{
+        margin-left: -50%;
+        opacity: 0%;
+    }
+}
+@keyframes img {
+    from{
+        opacity: 0%;
+    }
+}
