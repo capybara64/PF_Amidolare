@@ -1,0 +1,79 @@
+@import "../variables/variables";
+
+/* Estilo botones */
+@mixin boton($activo){
+    
+    border-radius: 10px;
+    padding: 2px;
+    margin: 0 10px;
+    border: none;
+    height: 50px;
+    transition: all .2s;
+
+    @if $activo{
+        background-color: $color1;
+        &:hover{
+            background-color: $color1_oscuro;
+        }
+    }
+    @else{
+        background-color: $color2;
+        &:hover{
+            background-color: $color2_oscuro;
+        }
+    }
+    
+}
+.boton--menu,.boton--comprar,#enviar{
+    @include boton(true);
+}
+.boton--agotado{
+    @include boton(false);
+}
+
+/* Texto botones */
+a div p, button, input[type='submit']{
+    margin-top: 8px;
+    font-size: 18px;
+    color: $color_oscuro;
+    font-family: $fuente1;
+    font-weight: bold;
+    align-items: center;
+}
+
+/* Botones nav */
+nav ul li{
+    width: 18%;
+}
+
+/* Botón form */
+input[type='submit']{
+    width: 120px;
+}
+
+/* Botones tabla */
+td button{
+    width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Estilo botones */
+    .boton--menu,.boton--comprar,.boton--agotado{
+        height: 30px;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Texto botones del nav y form */
+    a div p, input[type='submit']{
+        font-size: 14px;
+        margin: 2px 0;
+    }
+
+    /* Botones tabla */
+    td button{
+        font-size: 8px;
+        width: 80%;
+        height: 30px;
+    }
+}
