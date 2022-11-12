@@ -109,10 +109,9 @@ td button {
   width: calc(0.75 * 30vw);
   opacity: 0;
   color: white;
-  padding: 20px;
-  border-radius: 0 0 12px 12px; }
-  .overlay p {
-    width: calc(0.75 * 30vw); }
+  border-radius: 0 0 12px 12px;
+  padding: 20px 0;
+  max-height: 80px; }
 
 /* Biografía */
 .bio {
